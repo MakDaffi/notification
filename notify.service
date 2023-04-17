@@ -1,0 +1,9 @@
+[Unit]
+Description=Run notification task every hour
+
+[Service]
+Type=simple
+ExecStart=/bin/notify
+
+[Install]
+WantedBy=multi-user.target

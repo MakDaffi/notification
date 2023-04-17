@@ -1,0 +1,8 @@
+[Unit]
+Description=Run notification every hour
+
+[Timer]
+OnUnitActiveSec=60min
+
+[Install]
+WantedBy=timers.target
