@@ -25,10 +25,7 @@ This test program displays system date and time every hour via notification
 
 mkdir -p \
 	%buildroot/bin/
-ls -l
 install -Dm0644 %name %buildroot/bin/
-pwd
-ls -l
 
 mkdir -p \
 	%buildroot%_sysconfdir/xdg/systemd/user/
