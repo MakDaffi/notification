@@ -1,3 +1,5 @@
+%define _unpackaged_files_terminate_build 1
+
 Name: notify
 Version: 0.1
 Release: alt1
@@ -19,13 +21,12 @@ This test program displays system date and time every hour via notification
 %setup -q
 
 %build
-%make
+%make_build
 
 %install
-
 mkdir -p \
-	%buildroot/bin/
-install -Dm0644 %name %buildroot/bin/
+	%buildroot/bin
+install -Dm0755 %name %buildroot/bin/
 
 mkdir -p \
 	%buildroot%_sysconfdir/xdg/systemd/user/
